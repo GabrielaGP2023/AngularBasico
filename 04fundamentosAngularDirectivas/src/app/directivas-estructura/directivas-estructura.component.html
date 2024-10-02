@@ -1,0 +1,80 @@
+<h2>Ejemplo de directiva if</h2>
+<h2>Formulario de registro</h2>
+<div>
+    <label >Email</label>
+    <input type="email" placeholder="Email" [(ngModel)]="correoElectronico">
+    <br>
+    <label >Password</label>
+    <input type="password" placeholder="Paswword" [(ngModel)]="contrasena">
+    <br>
+    <label >Repetir password</label>
+    <input type="password" placeholder="Repetir password" [(ngModel)]="contresenaRepetir">
+    <br>
+    <button (click)="verificar()">Registrar</button>
+    @if(correcto){
+        <p>Registro realizado</p>
+    }@else {
+        <p>--Las contraseñas tienen que coincidir</p>
+    }
+    <p *ngIf="correcto; else incorrecto">Registro realizado</p>
+    <ng-template #incorrecto> 
+        <p>Las contraseñas tienen que coincidir</p>
+    </ng-template>
+
+</div>
+<h2>Recorrer un array con directiva for</h2>
+<h3>Caso 1</h3>
+<ol>
+@for (elemento of planetas; track $index) {
+    <li>{{elemento}}</li>
+}
+</ol>
+<ol>
+    <li *ngFor="let item of planetas"> {{item}}</li>
+</ol>
+<h3>Caso 2</h3>
+<ul>
+    @for(elemento of usuarios; track elemento.id){
+        <li>{{elemento.id}}   {{elemento.nombre}}</li>
+    }@empty {
+        <p>No hay datos que mostrar</p>
+    }
+    
+</ul>
+<ul>
+    <li *ngFor="let elemento of usuarios">
+      {{elemento.id}} - {{elemento.nombre}}
+    </li>
+    <p *ngIf="usuarios.length === 0">No hay datos que mostrar</p>
+  </ul>
+
+  <h3>Ejemplo directiva switch</h3>
+  <h4>Caso 1</h4>
+  <div>
+    @switch(estado) {
+      @case('exito') {
+        <p>¡Operación realizada con éxito!</p>
+      }
+      @case('error') {
+        <p>Hubo un error al realizar la operación.</p>
+      }
+      @case('cargando') {
+        <p>Cargando, por favor espera...</p>
+      }
+      @default {
+        <p>Estado desconocido.</p>
+      }
+    }
+  </div>
+<h4>Caso 2</h4>
+  <div [ngSwitch]="estado">
+    <p *ngSwitchCase="'exito'">¡Operación realizada con éxito!</p>
+    <p *ngSwitchCase="'error'">Hubo un error al realizar la operación.</p>
+    <p *ngSwitchCase="'cargando'">Cargando, por favor espera...</p>
+    <p *ngSwitchDefault>Estado desconocido.</p>
+  </div>
+  
+  
+
+  
+

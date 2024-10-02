@@ -1,0 +1,12 @@
+.special {
+    color:burlywood;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
+  .modified {
+    font-weight: bold;
+  }
+  
+  .saveable {
+    border: 2px solid red;
+  }
