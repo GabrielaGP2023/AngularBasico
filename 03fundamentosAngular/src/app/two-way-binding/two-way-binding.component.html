@@ -1,0 +1,40 @@
+<h1>Two way bindng</h1>
+<p>Captura de datos desde la plantilla</p>
+<label for="nombre">Nombre:</label>
+<input type="text"id="nombre" placeholder="Escriba el nombre" [(ngModel)]="nombre">
+<br>
+<label for="lenguajes">Lenguajes de programación</label>
+<br>
+<label for="java">Java</label>
+<input type="checkbox" name="java" id="java" [(ngModel)]="java">
+<br>
+<label for="python">Python</label>
+<input type="checkbox" name="python" id="python" [(ngModel)]="python">
+<br>
+<label for="javaScript">JavaScript</label>
+<input type="checkbox" name="javaScript" id="javaScript" [(ngModel)]="javaScript">
+<br>
+<label for="genero">Genero:</label>
+<input type="radio" name="genero" id="genero" [(ngModel)]="genero" value="mujer">
+Mujer 
+<input type="radio" name="genero" id="genero" [(ngModel)]="genero" value="hombre">
+Hombre 
+<input type="radio" name="genero" id="genero" [(ngModel)]="genero" value="otro">
+Otro
+<br>
+<label for="estudios">Estudios:</label>
+<select name="estudios" id="estudios" [(ngModel)]="estudios">
+    <option value="ESO">ESO</option>
+    <option value="Bachillerato">Bachillerato</option>
+    <option value="FP">FP</option>
+</select>
+
+
+<br>
+<h2>Los datos que usted ha escrito son</h2>
+<p>Nombre {{nombre}}</p>
+<p>Conocimientos de java -> {{java}}</p>
+<p>Conocimientos de python -> {{python}}</p>
+<p>Conocimientos de JavaScript -> {{javaScript}}</p>
+<p>Genero -> {{genero}}</p>
+<p>El nivel de estudios es -> {{estudios}}</p>

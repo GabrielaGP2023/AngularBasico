@@ -1,0 +1,19 @@
+<h3>One way bindg</h3>
+
+<h5>Interpolación</h5>
+<p>El nombre del usuario es : {{nombre}}</p>
+<p>La edad del usuario es {{edad}}</p>
+<p class="textoError">{{mensajeError}}</p>
+<h5>Enlace de propiedades</h5>
+<p>
+    <input type="checkbox" name="" id="" [checked]="politicaSeguridad">
+    Acepta política de seguridad
+</p>
+<h5>Eventos</h5>
+<button (click)="mostrarMensaje()">Presioname</button>
+<br>
+<p>Recoger valores de entrada desde la plantilla - fase anterior a two-way-bindng</p>
+<input type="text" (input)="recogerValor($event)"  placeholder="Introduce un pais"/>
+<p>El valor recogido es {{pais}}</p>
+
+

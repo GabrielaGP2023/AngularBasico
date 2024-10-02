@@ -1,0 +1,24 @@
+<h3>Ejercicios de One Way Binding</h3>
+<h4>Ejercicio 1</h4>
+<p>El numero 1 con valor {{numero1}} se suma con numero 2 con valor {{numero2}}</p>
+<p>El resultado es {{numero1+numero2}}</p>
+<hr>
+<h4>Ejercicio 2</h4>
+<p [style.color]="color">Este es un texto que cambia de color</p>
+<hr>
+<h4>Ejercicio 3</h4>
+<button [disabled]="deshabilitado">boton deshabilidatod</button>
+
+<hr>
+<h3>Ejercicio 4</h3>
+<label for="texto"></label>
+<input type="text"  id="texto" [placeholder]="valorPlaceHolder">
+<hr>
+<h3>Ejercicio 5</h3>
+<label >{{contador}}</label>
+<p>Cambia el valor del contador : 
+    <input type="number" (input)="recibirDato($event)"></p>
+<button (click)="incrementar()">Incrementar</button>
+<button (click)="decrementar()" [disabled]="contador<=0">Decrementar</button>
+<button (click)="restablecer()">Restablecer</button>
+<hr>
