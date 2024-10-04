@@ -13,9 +13,10 @@ export class DirectivaAtributoComponent  implements OnInit {
     this.setCurrentClasses();
     this.setCurrentStyles();
   }
-  isSpecial:boolean = true;
+  isSpecial:boolean = false;
   canSave:boolean = true;
   isUnchanged:boolean = true;
+  esPregunta:boolean = false;
 
   currentClasses: Record<string, boolean> = {};
   currentStyles: Record<string, string> = {};

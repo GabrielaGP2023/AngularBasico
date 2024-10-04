@@ -1,0 +1,49 @@
+<h2>Ejercicio 1</h2>
+
+<button (click)="esActivo = !esActivo">Cambiar Estado</button>
+<p></p>
+<div [ngStyle]="{'background-color': esActivo ? 'green' : 'red'}" style="width: 100px; height: 100px;">
+</div>
+
+<h2>Ejercicio 2</h2>
+
+<button (click)="status = status === 'activo' ? 'inactivo' : 'activo'">Cambiar Estado</button>
+<div [ngClass]="{'activo': status === 'activo', 'inactivo': status === 'inactivo'}">
+  Estado: {{status}}
+</div>
+
+<h2>Ejercicio 3</h2>
+<!-- Componente HTML -->
+<div *ngIf="estaAutenticado; else noAutenticado">
+    Bienvenido
+  </div>
+  <ng-template #noAutenticado>
+    <div>Por favor, inicia sesión</div>
+  </ng-template>
+
+@if (estaAutenticado) {
+    <div>Bienvenido</div>
+}@else {
+    <div>Por favor, inicia sesión</div>
+}
+
+<h2>Ejercicio 4</h2>
+<!-- Componente HTML -->
+<div [ngSwitch]="rolUsuario">
+    <div *ngSwitchCase="'admin'">Acceso total</div>
+    <div *ngSwitchCase="'editor'">Puedes editar contenido</div>
+    <div *ngSwitchCase="'viewer'">Solo puedes ver contenido</div>
+    <div *ngSwitchDefault>No tienes acceso</div>
+  </div>
+<h2>Ejercicio 5</h2>
+<!-- Componente HTML -->
+<ul>
+    <li *ngFor="let tarea of tareas">{{ tarea }}</li>
+  </ul>
+  
+
+
+  
+  
+
+

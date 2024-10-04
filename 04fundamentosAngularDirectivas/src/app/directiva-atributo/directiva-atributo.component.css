@@ -3,10 +3,17 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: larger;
 }
-  .modified {
+.modified {
     font-weight: bold;
   }
   
-  .saveable {
+.saveable {
     border: 2px solid red;
   }
+.textoPregunta{
+  color:blue;
+  font-weight: bolder;
+}
+.textoRespuesta{
+  color:red;
+}
