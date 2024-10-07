@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './detalle.component.css'
 })
 export class DetalleComponent implements OnInit {
+  //Aquí se recibe el dato de la url
   @Input() id:number = 0;
   articulos=[
     {"id":1,
